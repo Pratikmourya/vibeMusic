@@ -1,0 +1,260 @@
+#vibe-text
+{
+    
+    height: 50vh;
+    margin: 1rem 1.5rem;
+    text-align: center;
+    background: rgba(146,142,142,0.1);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border:1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.5s;
+    
+}
+
+ #vibe-text h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25vh;
+    color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    
+}
+
+#vibe-text p
+{
+  position:relative;
+  bottom:20vh;
+  font-size: 5vh;
+  color: rgba(255, 255, 255, 0.45);
+} 
+
+input[type=button]{
+    cursor: pointer;
+}
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+
+#information
+{
+  height:135vh;
+  margin: 1rem 1.5rem;
+  
+  
+}
+
+#information .info1
+{
+ 
+  height: 40vh;
+  display: flex;
+  margin: 1rem 3rem;
+
+}
+
+
+#information .info2
+{
+  height: 40vh;
+  display: flex;
+  margin: 1rem 3rem;
+}
+
+#information .info3
+{
+  height: 40vh;
+  display: flex;
+  margin: 1rem 3rem;
+}
+
+
+.info1 #img1
+{
+  margin: 1rem;
+  flex:1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 38vh;
+  width: 38vh;
+  background-color:unset;
+  border-radius: 50%;
+}
+
+.info1 #matter1
+{
+  margin-left: 2rem;
+  margin-top: 1rem;
+  flex :4;
+  height: 38vh;
+  width:55vw;
+  text-align: center;
+
+  
+  border-radius: 10px;
+  background: rgba(146,142,142,0.1);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border:1px solid rgba(255,255,255,0.2);
+ 
+}
+.info1 #img1 #happymusic
+{
+   max-height: 20vh;
+}
+
+.info2 #img2
+{
+  margin: 1rem;
+  flex:1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 38vh;
+  width: 38vh;
+  
+  border-radius: 50%;
+  z-index: 3;
+}
+.info2 #matter2
+{
+  margin-left: 2rem;
+  margin-top: 1rem;
+  flex :4;
+  height: 38vh;
+  width:55vw;
+  text-align: center;
+
+  
+  border-radius: 10px;
+  background: rgba(146,142,142,0.1);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border:1px solid rgba(255,255,255,0.2);
+}
+.info3 #img3
+{
+  margin: 1rem;
+  flex:1;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 38vh;
+  width: 38vh;
+  border-radius: 50%;
+}
+.info3 #matter3
+{
+  margin-left: 2rem;
+  margin-top: 1rem;
+  flex :4;
+  height: 38vh;
+  width:55vw;
+  text-align: center;
+
+  
+  border-radius: 10px;
+  background: rgba(146,142,142,0.1);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+#matter1 h3,#matter2 h3
+{
+  padding:2rem;
+  margin-top: 2em;
+}
+
+#matter3 h3
+{
+  padding:4rem;
+  margin-top:1.4em;
+}
+
+@media screen and (max-width:850px) 
+{
+  
+
+      #vibe-text
+      {
+        margin: 0.5em;
+      }
+      #vibe-text h1
+      {
+         font-size:8rem;
+          
+      }
+      
+      #vibe-text p
+      {
+        position: relative;
+        font-size:2rem;
+        margin-top:7rem;
+      } 
+      #information
+      {
+        display:flex;
+        flex-direction:column;
+        height: fit-content;
+        justify-content:center;
+        margin-left:5rem;
+        margin-right: -1rem;
+
+      }
+      #information .info1, #information .info2,
+      #information .info3
+      {
+        flex-direction:column;
+        z-index:1;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        
+       margin: 1rem 0 1rem 0;
+   
+      }
+      
+      .info1 #img1,.info2 #img2,.info3 #img3
+      {
+      display:none;
+        
+      }
+      
+     
+.info1 #matter1,.info2 #matter2,.info3 #matter3
+{
+  padding:1em;
+  width: 100%;
+  margin-left: -6em;
+}
+#matter1 h3,#matter2 h3
+{
+  padding:1rem;
+  margin-top: 2em;
+}
+
+#matter3 h3
+{
+  padding:1rem;
+  margin-top:1.4em;
+}
+
+}

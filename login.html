@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon (1).ico" type="image/x-icon">
+    <title>Login to Vibe</title>
+    <link rel="stylesheet" href="./styles/loginsignup.css">
+    <link rel="stylesheet" href="./styles/headerfooter.css">
+</head>
+
+<body>
+    
+    <div id="header1">
+        <ul>
+   
+            <li>
+                <a href="./index.html">HOME</a>
+            </li>
+            
+            <li>
+                <a href="./contactus.html" rel="noopener noreferrer">CONTACT US</a>
+            </li>
+            <li>
+                <img id="icon" src="images/moon.png" alt="dark-light-mode">
+               
+            </li>
+          
+        </ul>
+    </div>
+
+            <!-- LOGIN AND SIGN UP FORM -->
+            <div id="loginsignup" >
+                
+                <div id="login" class="container"  >
+                <form action="login_bnd.php" method="POST">
+                    <h2>Login</h2>
+                    <!-- <label for="uname"><i>Username</i></label> -->
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <br>
+                    <br>
+                    <!-- <label for="psw"><i>Password</i></label> -->
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Login" >
+                </form>
+                </div>
+                <div id="signup" >
+                <form  action="signup_bnd.html" method="POST" >
+                    <h2>Sign up</h2>
+                    <input type="text" placeholder="Enter your user name" name="uname" required>
+                    <br>
+                    <br>
+                    <input type="text" placeholder=" Enter your email" name="uemail" required>
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Enter yout phone number" name="uphone" required>  
+                    <br>
+                    <br>
+                    <input type="password" placeholder="Enter your pasword" name="psw" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="signup" onclick="return validateform()">
+                </form>
+                </div>
+                <a href="./main.html"><input  type="button"  id = "guest" value="Listen as guest"></a>
+            
+            </div>
+
+             
+            <footer id="footer">
+                <ul>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="ourteam.html">OUR TEAM</a></li>
+                    <div class="p">
+                    </ul>
+                    <div class="p">
+                        <p>
+                            This website and all its contents are Copyrighted
+                        </p>
+                        <p>
+                            &#169 VIBE 2021
+                        </p>
+                        <p>
+                            HAPPY MUSIC TO YOU
+                        </p>
+                        </div>
+                        <div class="h4">
+                        <h4>
+                            OUR ADDRESS
+                        </h4>
+                        <p>
+                            VIBE Inc.
+                            Texas
+                            <address>
+                                <i>vibe.2021@vibe.org</i>
+                            </address>
+                         </p>
+                    </div>
+               
+            </footer>
+
+            <div id="social">
+                <a href="" target="_blank"><img   class="logo-for"  src="./images/icons8-facebook.svg" alt="" srcset=""></a>
+                <a href="" target="_blank"> <img  class="logo-for"  src="./images/icons8-twitter.svg" alt="" srcset=""></a>
+                <a href="" target="_blank"> <img  class="logo-for"  src="./images/icons8-github.svg" alt=""></a>
+                
+        
+            </div>
+        
+            <script>
+    function validateform()
+    {
+        document.write("hi");
+        var name = document.loginform.uname.value;
+        var password = document.loginform.psw.value;
+        var email = document.loginform.uemail.value;
+        var phoneno = document.loginform.uphone.value;
+
+        var pattern = /^[^ ]+@[^ ]+.[a-z]{2,3}$/;
+        var patternphone = /^\d{10}$/;
+        if (name =="")
+        {
+            alert("Enter Username");
+            return false;
+        }
+        else if(password.length<8)
+        {
+            alert("password should have atleast have 8 characters.");
+            return false;
+        }
+        else if(phoneno<10)
+        {
+            alert("phone number must be 10 numbers");
+            return false;
+        }
+        else if (!email.match(pattern))
+        {
+            alert("Please enter a valid e-mail address");
+            return false;
+        }
+        else if (!phoneno.match(patternphone))
+        {
+            alert("invalid phone number..!")
+            return false;
+        }
+        return true;
+    }
+</script>
+            <!-- <script>
+                function logsign()
+                {
+                    var v1=document.getElementById("last-but");
+                    v1.style.transition="2s";
+                }
+                function transist(){
+                var v1 = document.getElementById("signup");
+                var v2 = document.getElementById("login");
+                var v = v1.id;
+                v1.id = v2.id;
+                v2.id = v;
+            }
+            </script> -->
+</body>
+</html>

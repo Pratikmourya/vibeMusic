@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    padding:0;
+    background-image: url("../images/back1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+
+
+#main 
+{
+    display:flex;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#dark
+{
+    background: rgba(146,142,142,0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    height:50vh;
+    max-width: 50vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#bt:hover{
+    background: white;
+}
